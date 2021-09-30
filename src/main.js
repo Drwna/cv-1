@@ -68,11 +68,12 @@ let string2 = "";
 let n = 0;
 let speed = 50;
 
-subtractSpeed = function () {
+function subtractSpeed() {
     speed += 40;
     console.log(speed);
 }
-addSpeed = function () {
+
+function addSpeed() {
     speed = speed - 40 > 0 ? speed - 40 : 0;
     console.log(speed);
 }
