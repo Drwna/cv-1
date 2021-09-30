@@ -65,21 +65,8 @@ let string = `
 }
 `;
 let string2 = "";
-console.log(string.length);
 let n = 0;
 let speed = 50;
-
-const subtractSpeed = () => {
-    speed += 50;
-}
-
-const addSpeed = () => {
-    speed -= 50;
-    if (speed < 0) {
-        speed = 0;
-    }
-}
-
 
 const step = () => {
     setTimeout(() => {
@@ -107,5 +94,14 @@ const step = () => {
         }
     }, speed);
 };
+const subtractSpeed = () => {
+    speed += 40;
+    console.log(speed);
+}
+
+const addSpeed = () => {
+    speed = speed - 40 > 0 ? speed - 40 : 0;
+    console.log(speed);
+}
 
 step();

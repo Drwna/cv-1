@@ -109,22 +109,8 @@ var style = document.querySelector('#style');
 
 var string = '\n/* \n* \u4F60\u597D\uFF0C\u6211\u662F\u4E00\u540D\u524D\u7AEF\u65B0\u4EBA\n* \u63A5\u4E0B\u6765\u6211\u6F14\u793A\u4E00\u4E0B\u6211\u7684\u524D\u7AEF\u529F\u5E95\n* \u9996\u5148\uFF0C\u6211\u8981\u51C6\u5907\u4E00\u4E2A div\n* \u63A5\u4E0B\u6765\u6211\u8981\u52A0\u6837\u5F0F\u4E86\n* \u52A0\u7684\u6837\u5F0F\u662F\n*/\n\n#div1 {\n    border: 1px solid red;\n    width: 200px;\n    height: 200px;\n}\n/*\n* \u63A5\u4E0B\u6765\u6211\u628A\u8FD9\u4E2A div \u53D8\u6210\u4E00\u4E2A\u516B\u5366\u56FE\n* \u6CE8\u610F\u770B\u597D\u4E86\n* \u9996\u5148\uFF0C\u628A div \u53D8\u6210\u4E00\u4E2A\u56ED\n*/\n#div1 {\n    border-radius: 50%;\n    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);\n    border: none;\n}\n/* \n* \u516B\u5366\u662F\u9634\u9633\u5F62\u6210\u7684\n* \u4E00\u9ED1\u4E00\u767D\n*/\n#div1 {\n    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);\n}\n/*\n* \u52A0\u4E24\u4E2A\u5C0F\u7403\n*/\n#div1::before {\n    width: 100px;\n    height: 100px;\n    top: 0;\n    left: 50%;\n    transform: translateX(-50%);\n    background: #000;\n    border-radius: 50%;\n    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 100%);\n}\n/* \n*/\n#div1::after {\n    width: 100px;\n    height: 100px;\n    bottom: 0;\n    left: 50%;\n    transform: translateX(-50%);\n    background: #fff;\n    border-radius: 50%;\n    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 100%);\n}\n/*\n\u65CB\u8F6C\u8D77\u6765\n*/\n#div1 {\n    animation: move 10s infinite linear;\n}\n';
 var string2 = "";
-console.log(string.length);
 var n = 0;
 var speed = 50;
-
-var subtractSpeed = function subtractSpeed() {
-    speed += 50;
-    console.log(speed);
-};
-
-var addSpeed = function addSpeed() {
-    speed -= 50;
-    if (speed < 0) {
-        speed = 0;
-    }
-    console.log(speed);
-};
 
 var step = function step() {
     setTimeout(function () {
@@ -152,7 +138,16 @@ var step = function step() {
         }
     }, speed);
 };
+var subtractSpeed = function subtractSpeed() {
+    speed += 40;
+    console.log(speed);
+};
+
+var addSpeed = function addSpeed() {
+    speed = speed - 40 > 0 ? speed - 40 : 0;
+    console.log(speed);
+};
 
 step();
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.5c7bd39b.map
+//# sourceMappingURL=main.d8287614.map
