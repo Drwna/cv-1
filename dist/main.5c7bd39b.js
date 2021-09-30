@@ -111,6 +111,20 @@ var string = '\n/* \n* \u4F60\u597D\uFF0C\u6211\u662F\u4E00\u540D\u524D\u7AEF\u6
 var string2 = "";
 console.log(string.length);
 var n = 0;
+var speed = 50;
+
+var subtractSpeed = function subtractSpeed() {
+    speed += 50;
+    console.log(speed);
+};
+
+var addSpeed = function addSpeed() {
+    speed -= 50;
+    if (speed < 0) {
+        speed = 0;
+    }
+    console.log(speed);
+};
 
 var step = function step() {
     setTimeout(function () {
@@ -136,9 +150,9 @@ var step = function step() {
             n += 1;
             step();
         }
-    }, 50);
+    }, speed);
 };
 
 step();
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.6c0bb7a8.map
+//# sourceMappingURL=main.5c7bd39b.map
