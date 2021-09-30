@@ -68,6 +68,14 @@ let string2 = "";
 let n = 0;
 let speed = 50;
 
+subtractSpeed = function () {
+    speed += 40;
+    console.log(speed);
+}
+addSpeed = function () {
+    speed = speed - 40 > 0 ? speed - 40 : 0;
+    console.log(speed);
+}
 const step = () => {
     setTimeout(() => {
         // 如果是回车，就不照搬
@@ -94,7 +102,5 @@ const step = () => {
         }
     }, speed);
 };
-
-
 
 step();

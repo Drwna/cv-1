@@ -112,6 +112,14 @@ var string2 = "";
 var n = 0;
 var speed = 50;
 
+subtractSpeed = function subtractSpeed() {
+    speed += 40;
+    console.log(speed);
+};
+addSpeed = function addSpeed() {
+    speed = speed - 40 > 0 ? speed - 40 : 0;
+    console.log(speed);
+};
 var step = function step() {
     setTimeout(function () {
         // 如果是回车，就不照搬
@@ -141,4 +149,4 @@ var step = function step() {
 
 step();
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.79784b50.map
+//# sourceMappingURL=main.cb2e2763.map
