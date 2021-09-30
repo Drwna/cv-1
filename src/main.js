@@ -69,21 +69,19 @@ console.log(string.length);
 let n = 0;
 let speed = 50;
 
-let subtractSpeed = () => {
+const subtractSpeed = () => {
     speed += 50;
-    console.log(speed);
 }
 
-let addSpeed = () => {
+const addSpeed = () => {
     speed -= 50;
     if (speed < 0) {
         speed = 0;
     }
-    console.log(speed);
 }
 
 
-let step = () => {
+const step = () => {
     setTimeout(() => {
         // 如果是回车，就不照搬
         // 如果不是回车，就照搬
