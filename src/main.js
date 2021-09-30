@@ -95,12 +95,12 @@ const step = () => {
     }, speed);
 };
 
-const subtractSpeed = function () {
+subtractSpeed = function () {
     speed += 40;
     console.log(speed);
 }
 
-const addSpeed = function () {
+addSpeed = function () {
     speed = speed - 40 > 0 ? speed - 40 : 0;
     console.log(speed);
 }
