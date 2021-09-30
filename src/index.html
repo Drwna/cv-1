@@ -15,6 +15,10 @@
         <div id="div1Wrapper">
             <div id="div1"></div>
         </div>
+        <div id="btn">
+            <button onclick="subtractSpeed()">-</button>
+            <button onclick="addSpeed()">+</button>
+        </div>
         <style>
             * {
                 margin: 0;
@@ -23,6 +27,17 @@
 
             body {
                 background-color: #ccc;
+            }
+
+            #btn {
+                position: fixed;
+                right: 50%;
+                top: 50px;
+            }
+
+            button {
+                width: 50px;
+                height: 30px;
             }
 
             #html {

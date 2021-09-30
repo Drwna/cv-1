@@ -67,6 +67,21 @@ let string = `
 let string2 = "";
 console.log(string.length);
 let n = 0;
+let speed = 50;
+
+let subtractSpeed = () => {
+    speed += 50;
+    console.log(speed);
+}
+
+let addSpeed = () => {
+    speed -= 50;
+    if (speed < 0) {
+        speed = 0;
+    }
+    console.log(speed);
+}
+
 
 let step = () => {
     setTimeout(() => {
@@ -92,7 +107,7 @@ let step = () => {
             n += 1;
             step();
         }
-    }, 50);
+    }, speed);
 };
 
 step();
