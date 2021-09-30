@@ -139,16 +139,6 @@ var step = function step() {
     }, speed);
 };
 
-subtractSpeed = function subtractSpeed() {
-    speed += 40;
-    console.log(speed);
-};
-
-addSpeed = function addSpeed() {
-    speed = speed - 40 > 0 ? speed - 40 : 0;
-    console.log(speed);
-};
-
 step();
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.1ae7cf94.map
+//# sourceMappingURL=main.79784b50.map
